@@ -1,0 +1,26 @@
+{
+    "name": "netty-im-devcontainer",
+    "image": "mcr.microsoft.com/devcontainers/base:ubuntu",  // Any generic, debian-based image.
+    "features": {
+        "ghcr.io/devcontainers/features/go:1": {
+            "version": "1.20"
+        },
+        "ghcr.io/azutake/devcontainer-features/go-packages-install:0": {
+          "PACKAGES": "github.com/zeromicro/go-zero/tools/goctl@latest, github.com/zeromicro/go-zero@latest"
+        },
+        "ghcr.io/devcontainers/features/java:1": {
+            "version": "8",
+            "installMaven": true,
+            "mavenVersion": "3.8.6"
+        },
+        "ghcr.io/devcontainers-contrib/features/springboot-sdkman:2": {
+            "jdkVersion": "8",
+            "jdkDistro": "open"
+        },
+        "ghcr.io/devcontainers/features/git:1": {},
+        "ghcr.io/devcontainers/features/docker-in-docker:1": {
+            "version": "latest",
+            "moby": true
+        }
+    }
+}
